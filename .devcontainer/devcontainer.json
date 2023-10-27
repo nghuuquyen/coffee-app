@@ -1,0 +1,44 @@
+// https://aka.ms/devcontainer.json
+{
+	"name": "Dev Container",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "laravel.test",
+	"workspaceFolder": "/var/www/html",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mikestead.dotenv",
+				"amiralizadeh9480.laravel-extra-intellisense",
+				"ryannaddy.laravel-artisan",
+				"onecentlin.laravel5-snippets",
+				"onecentlin.laravel-blade",
+				"ctf0.php-array-symbols",
+				"xdebug.php-debug",
+				"xdebug.php-pack",
+				"zobo.php-intellisense",
+				"MehediDracula.php-namespace-resolver",
+				"adpyke.vscode-sql-formatter",
+				"janisdd.vscode-edit-csv",
+				"dbaeumer.vscode-eslint",
+				"rifi2k.format-html-in-php",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"erlangparasu.goto-route-controller-laravel",
+				"codingyu.laravel-goto-view",
+				"mohamedbenhida.laravel-intellisense",
+				"open-southeners.laravel-pint",
+				"naoray.laravel-goto-components",
+				"recca0120.vscode-phpunit",
+				"neilbrayfield.php-docblocker",
+				"austenc.laravel-blade-spacer",
+				"bradlc.vscode-tailwindcss",
+				"alexcvzz.vscode-sqlite",
+				"shufo.vscode-blade-formatter",
+				"brano.typopo-vscode"
+			],
+			"settings": {}
+		}
+	}
+}
