@@ -1,5 +1,5 @@
 <div x-data="{}" class="flex flex-row bg-surface p-3 w-full cursor-pointer hover:shadow-xl rounded"
-     @click="$dispatch('USER_SELECT_PRODUCT_EVENT', {{ $product->id }})">
+     @click="$dispatch('USER_SELECT_PRODUCT_EVENT', { product_id: {{ $product->id }} })">
     <div class="flex-shrink-0">
         <img class="object-cover h-28 w-28 rounded" src="{{ $product->display_image_url }}?w=150&h=150"
              alt="product image" />
