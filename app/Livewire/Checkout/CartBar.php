@@ -4,7 +4,6 @@ namespace App\Livewire\Checkout;
 
 use App\Models\Cart;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 use Livewire\Component;
 use App\Events\LivewireEvent;
 use App\Services\CartService;
@@ -45,7 +44,7 @@ class CartBar extends Component
         Log::channel('user_actions')->info('User remove product out of cart', ['product_id' => $product_id]);
     }
 
-    public function checkout(): RedirectResponse
+    public function checkout()
     {
         return redirect()->route('checkout.index');
     }
