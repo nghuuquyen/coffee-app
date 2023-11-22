@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', [App\Http\Controllers\HomepageController::class, 'index'])->name('homepage');
 
-    $categories = Category::query()->with('products')->get();
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout.index');
 
-    return view('welcome', [
-        'categories' => $categories,
-    ]);
-});
+Route::post('/checkout', [App\Http\Controllers\CheckoutController::class, 'store'])->name('checkout.store');
+
+Route::get('/checkout/{order}', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout.show');
+
+Route::get('/order-complete/{order}', App\Http\Controllers\OrderCompleteController::class)->name('orders.complete');
