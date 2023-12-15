@@ -9,6 +9,7 @@
         "dedoc/scramble": "^0.8.4",
         "doctrine/dbal": "^3.7",
         "guzzlehttp/guzzle": "^7.2",
+        "laravel/fortify": "^1.19",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/telescope": "^4.17",
@@ -54,7 +55,7 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "laravel/telescope"
+                
             ]
         }
     },
