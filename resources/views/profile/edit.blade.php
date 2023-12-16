@@ -3,7 +3,14 @@
         {{ __('Profile') }}
     </x-slot:title>
 
-    <div class="py-6">
+    <div class="py-6" 
+         x-data="{ status: @js(session('status'))}"
+         x-init="
+            if (['two-factor-authentication-enabled', 'two-factor-authentication-confirmed'].includes(status)) {
+                document.getElementById('two-factor-authentication').scrollIntoView();
+            }
+         "
+    >
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8 space-y-6">
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <x-panel>
@@ -41,6 +48,12 @@
                 </div>
             </x-panel>
 
+            <x-panel id="two-factor-authentication" :header="__('Two Factor Authentication')" :sub-header="__('Add additional security to your account using two factor authentication.')">
+                <div class="max-w-xl">
+                    @include('profile.partials.two-factor-authentication')
+                </div>
+            </x-panel>
+                
             <x-panel>
                 <div class="max-w-xl">
                     @include('profile.partials.delete-user-form')
