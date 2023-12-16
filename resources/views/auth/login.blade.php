@@ -4,7 +4,7 @@
     </x-slot>
 
     <section>
-        <x-panel icon="cube" header="{{ __('Login') }}">
+        <x-panel icon="cube" header="{{ __('Login') }}" class="max-w-3xl m-auto">
             @if (session('status'))
                 <div
                     class="mb-4 font-medium text-sm text-white flex flex-row items-center justify-center p-4 rounded-lg bg-[#219654]">

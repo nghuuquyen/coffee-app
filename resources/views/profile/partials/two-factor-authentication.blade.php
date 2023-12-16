@@ -1,7 +1,7 @@
 <section>
     @if(! auth()->user()->hasEnabledTwoFactorAuthentication())
         @if (session('status') == 'two-factor-authentication-enabled')
-            <form method="POST" action="{{ route('two-factor.confirm') }}" class="grid grid-cols-1 gap-6">
+            <form method="POST" action="{{ route('two-factor.confirm') }}" class="grid grid-cols-1 gap-4">
                 @csrf
 
                 <div class="flex flex-col text-on-surface-600">
@@ -33,7 +33,7 @@
                 </div>
             </form>
         @else
-            <form method="POST" action="{{ route('two-factor.enable') }}" class="grid grid-cols-1 gap-6">
+            <form method="POST" action="{{ route('two-factor.enable') }}" class="grid grid-cols-1 gap-4">
                 @csrf
                 <div class="flex flex-col text-on-surface-600">
                     <span class="mb-1 font-bold">

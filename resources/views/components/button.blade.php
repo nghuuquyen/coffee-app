@@ -11,7 +11,7 @@
     </a>
 @else
     <button type="{{ $type ?? 'button' }}"
-        {{ $attributes->merge(['class' => 'flex bg-primary-600 hover:bg-primary-400 text-sm  text-on-primary-50 hover:text-on-primary active:translate-y-1 rounded-lg lg:rounded-2xl px-4 py-2 flex-shrink-0 w-auto items-center justify-center']) }}>
+        {{ $attributes->merge(['class' => 'flex bg-primary-600 hover:bg-primary-400 text-sm  text-on-primary-50 hover:text-on-primary active:translate-y-1 rounded-lg lg:rounded-2xl px-6 py-2 flex-shrink-0 w-auto items-center justify-center']) }}>
         @includeIf('components/icons/' . ($icon ?? ''))
 
         @if(trim($slot))

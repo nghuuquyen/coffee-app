@@ -5,14 +5,14 @@
     @endphp
     
     @isset($label)
-        <label class="font-normal mb-2 text-on-surface-600" for="input_{{  ($name ?? '_') . $randomFieldId }}">{{ $label }}</label>
+        <label class="font-normal mb-1 text-on-surface-600 text-sm" for="input_{{  ($name ?? '_') . $randomFieldId }}">{{ $label }}</label>
     @endisset
 
     <input
         id="input_{{  ($name ?? '_') . $randomFieldId }}"
         {{ $attributes->merge([
             'class' =>
-                'border text-on-surface-600 border-on-surface-300 px-4 py-4 bg-surface ' .
+                'border text-on-surface-600 border-on-surface-300 px-2 py-3 rounded-lg bg-surface text-sm' .
                 ($messageBag->has($name ?? null) ? ' border-red-500' : ''),
         ]) }}
         type="{{ $type ?? 'text' }}" placeholder="{{ $placeholder ?? '' }}"
